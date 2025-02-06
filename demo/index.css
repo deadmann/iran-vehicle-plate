@@ -1,0 +1,15 @@
+body,
+html {
+  font-size: 40px;
+}
+.container {
+  overflow: auto;
+  position: fixed;
+  display: flex;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  align-items: center;
+  background-color: #ffbf00;
+}
