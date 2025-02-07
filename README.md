@@ -1,3 +1,5 @@
-The HTML/CSS template of iranian license plate initially were created by `Mehdi Hadjar` in https://codepen.io/mhdhadjar/pen/YzXOaNL
+This component provide ability to show iran license plate. for now it only support basic template. and it is provide new feature called shadow-root, and intended to be used on pages without use of any framework and be used with pure or any supporting application.
 
-Now it is turned into a component by Hassan Faghihi.
+The initial HTML/CSS template of iranian license plate were created by `Mehdi Hadjar` and can be found in https://codepen.io/mhdhadjar/pen/YzXOaNL
+
+Now it is enhanced and turned into a component by Hassan Faghihi.
