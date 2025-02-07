@@ -9,7 +9,8 @@
     "less-watch-all": "npm-run-all --parallel less-watch-demo less-watch-component",
     "less-build": "lessc demo/index.less demo/index.css && lessc src/css/iran-license-plate.less src/css/iran-license-plate.css",
     "build": "npm run less-build && rollup -c",
-    "dev": "npm-run-all --parallel less-watch-all build"
+    "dev": "npm-run-all --parallel less-watch-all build",
+    "postversion": "git push && git push --tags"
   },
   "keywords": [
     "iran",
