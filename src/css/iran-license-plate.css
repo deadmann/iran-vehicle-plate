@@ -1,6 +1,7 @@
 .iran-license-plate {
   margin: 0 auto;
-  min-width: 6.8em;
+  min-width: 7.6em;
+  max-width: 7.6em;
   display: inline-block;
   border-radius: 0.2em;
   border: 0.08em solid #333;

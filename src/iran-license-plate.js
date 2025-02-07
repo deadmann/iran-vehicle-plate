@@ -35,13 +35,17 @@ class IranLicensePlate extends HTMLElement {
             if (desiredWidth || desiredHeight) {
                 this.scaleToFit(desiredWidth, desiredHeight);
             }
+
+            this.setContent()
         }, 0);
     }
 
+    // noinspection JSUnusedGlobalSymbols
     static get observedAttributes() {
-        return ['width', 'height'];
+        return ['width', 'height', 'left-part', 'alphabet-part', 'right-part', 'code-part'];
     }
 
+    // noinspection JSUnusedGlobalSymbols,JSUnusedLocalSymbols
     attributeChangedCallback(name, oldValue, newValue) {
         // When attributes change, re-scale using the stored original dimensions.
         if (this._originalWidth && this._originalHeight) {
@@ -49,6 +53,8 @@ class IranLicensePlate extends HTMLElement {
             const desiredHeight = this.getAttribute('height') ? parseFloat(this.getAttribute('height')) : null;
             this.scaleToFit(desiredWidth, desiredHeight);
         }
+
+        this.setContent();
     }
 
     render() {
@@ -100,6 +106,36 @@ class IranLicensePlate extends HTMLElement {
     scaleToFit(desiredWidth, desiredHeight) {
         const scaleFactor = this.calculateScaleFactor(desiredWidth, desiredHeight);
         this.applyScaling(scaleFactor);
+    }
+
+    setContent() {
+        // SET CONTENT
+        const plateElem = this.shadowRoot.querySelector('.plate');
+        if(plateElem == null)
+            return;
+
+        const leftDataElem = plateElem.querySelector('.left-data');
+        const alphabetElem = plateElem.querySelector('.alphabet-data');
+        const rightElem = plateElem.querySelector('.right-data');
+        const codeElem = plateElem.querySelector('.code-data');
+
+        const leftPartData = this.getAttribute('left-part')
+        const alphabetPartData = this.getAttribute('alphabet-part')
+        const rightPartData = this.getAttribute('right-part')
+        const codePartData = this.getAttribute('code-part')
+
+        leftDataElem.textContent = this.convertNumberToPersian(leftPartData);
+        alphabetElem.textContent = this.convertNumberToPersian(alphabetPartData);
+        rightElem.textContent = this.convertNumberToPersian(rightPartData);
+        codeElem.textContent = this.convertNumberToPersian(codePartData);
+    }
+
+    convertNumberToPersian(num) {
+        if(num == undefined || num == null)
+            return '';
+
+        const persianDigits = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+        return num.toString().replace(/\d/g, digit => persianDigits[digit]);
     }
 }
 customElements.define('iran-license-plate', IranLicensePlate);
