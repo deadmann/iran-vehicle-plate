@@ -33,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/deadmann/iran-vehicle-plate"
+    "url": "git+https://github.com/deadmann/iran-vehicle-plate.git"
   },
   "files": [
     "dist"
@@ -55,6 +55,5 @@
     "node": ">=18.0.0",
     "npm": ">=8.8.8"
   },
-  "contributors": [
-  ]
+  "contributors": []
 }
