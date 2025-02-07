@@ -1,5 +1,5 @@
 {
-  "name": "vehicleplates",
+  "name": "iran-vehicle-plates",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "This component provide ability to show iran license plate. for now it only support basic template. and it is provide new feature called shadow-root, and intended to be used on pages without use of any framework and be used with pure or any supporting application.",
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^28.0.2",
