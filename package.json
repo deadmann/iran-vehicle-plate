@@ -1,5 +1,5 @@
 {
-  "name": "iran-vehicle-plates",
+  "name": "iran-vehicle-plate",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -7,7 +7,7 @@
     "less-watch-demo": "less-watch-compiler demo demo",
     "less-watch-component": "less-watch-compiler src/css src/css",
     "less-watch-all": "npm-run-all --parallel less-watch-demo less-watch-component",
-    "less-build": "lessc demo/index.less demo/index.css && lessc src/css/iran-license-plate.less src/css/iran-license-plate.css",
+    "less-build": "lessc demo/index.less demo/index.css && lessc src/css/iran-vehicle-plate.less src/css/iran-vehicle-plate.css",
     "build": "npm run less-build && rollup -c",
     "dev": "npm-run-all --parallel less-watch-all build",
     "postversion": "git push && git push --tags"

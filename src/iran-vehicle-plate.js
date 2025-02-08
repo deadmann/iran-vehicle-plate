@@ -1,7 +1,7 @@
-import templateHTML from './templates/iran-license-plate.html'; // Mark it as raw text
-import templateCss from './css/iran-license-plate.css'; // No need to import as a string; Rollup will handle it.
+import templateHTML from './templates/iran-vehicle-plate.html'; // Mark it as raw text
+import templateCss from './css/iran-vehicle-plate.css'; // No need to import as a string; Rollup will handle it.
 
-class IranLicensePlate extends HTMLElement {
+class IranVehiclePlate extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
@@ -138,6 +138,6 @@ class IranLicensePlate extends HTMLElement {
         return num.toString().replace(/\d/g, digit => persianDigits[digit]);
     }
 }
-customElements.define('iran-license-plate', IranLicensePlate);
+customElements.define('iran-vehicle-plate', IranVehiclePlate);
 
-export default IranLicensePlate;
+export default IranVehiclePlate;
