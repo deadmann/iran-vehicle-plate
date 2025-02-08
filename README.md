@@ -7,7 +7,17 @@ The initial HTML/CSS template of iranian license plate were created by `Mehdi Ha
 
 Now it is enhanced and turned into a component by Hassan Faghihi.
 
-
+Usage:
+```html
+<link href="/path/to/iran-license-plate.css" />
+<iran-license-plate
+    left-part="dataLeftPart"
+    alphabet-part="dataAlphabetPart"
+    right-part="dataRightPart"
+    code-part="dataCodePart"
+    ></iran-license-plate>
+<script src="/path/to/iran-license-plate.js"></script>
+```
 
 ------------------
 ### Notes To Me
