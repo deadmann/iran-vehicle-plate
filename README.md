@@ -27,3 +27,8 @@ Auto versioning with `postversion` script and publish
 npm version patch
 npm publish
 ```
+
+Tagging Commit:
+```shell
+git tag -a v1.0.0 -m "Release v1.0.0"
+```
